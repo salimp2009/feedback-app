@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Feedback-App
+This is one of my React learning project.
+It is SPA; Single page application
+There will more projects :)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
