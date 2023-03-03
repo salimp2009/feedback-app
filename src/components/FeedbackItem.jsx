@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import Card from "./shared/Card";
 
 function FeedbackItem({ item }) {
+  const handleClick = (id) => console.log(id);
+
   return (
     <Card /* reverse={true} */>
       <div className="num-display">{item.rating}</div>
-      <button onClick={() => console.log("testing close")} className="close">
+      <button onClick={() => handleClick(item.id)} className="close">
         <FaTimes color="purple" />
       </button>
       <div className="text-display">{item.text}</div>
