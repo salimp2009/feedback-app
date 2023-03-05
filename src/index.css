@@ -106,12 +106,16 @@ header {
   border: 1px solid #ccc;
   padding: 8px 10px;
   border-radius: 8px;
+  background-color: inherit;
 }
 
 input {
   flex-grow: 2;
   border: none;
   font-size: 16px;
+  /* added as an extra */
+  background-color: inherit;
+  color: inherit;
 }
 
 input:focus {
