@@ -26,7 +26,7 @@ function FeedbackForm() {
     <Card reverse={true}>
       <form>
         <h2>Please send your comments and ratings </h2>
-        <RatingSelect />
+        <RatingSelect select={(rating) => setRating(rating)} />
         <div className="input-group">
           <input
             onChange={handleTextChange}
