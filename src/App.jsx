@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 as uuid4 } from "uuid";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Post from "./components/Post";
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackStats from "./components/FeedbackStats";
@@ -42,6 +43,7 @@ function App() {
             }
           ></Route>
           <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/post/:id/:name" element={<Post />} /> */}
         </Routes>
         <AboutIconLink />
       </div>
