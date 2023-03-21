@@ -25,31 +25,30 @@ function App() {
     setFeedback([newFeedback, ...feedback]);
   };
   return (
-    <Router>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
-                />
-              </>
-            }
-          ></Route>
-          <Route path="/about" element={<AboutPage />} />
-          {/* <Route path="/post/:id/:name" element={<Post />} /> */}
-          {/* <Route path="/post/*" element={<Post />} /> */}
-        </Routes>
-        <AboutIconLink />
-      </div>
-    </Router>
+    <FeedbackProvider>
+      <Router>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList handleDelete={deleteFeedback} />
+                </>
+              }
+            ></Route>
+            <Route path="/about" element={<AboutPage />} />
+            {/* <Route path="/post/:id/:name" element={<Post />} /> */}
+            {/* <Route path="/post/*" element={<Post />} /> */}
+          </Routes>
+          <AboutIconLink />
+        </div>
+      </Router>
+    </FeedbackProvider>
   );
 }
 
