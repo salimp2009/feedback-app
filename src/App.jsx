@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { v4 as uuid4 } from "uuid";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Post from "./components/Post";
+// import Post from "./components/Post";
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import FeedbackData from "./data/FeedbackData";
 import AboutPage from "./pages/AboutPage";
+import { FeedbackProvider } from "./context/FeedbackContext";
 import AboutIconLink from "./components/AboutIconLink";
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
           ></Route>
           <Route path="/about" element={<AboutPage />} />
           {/* <Route path="/post/:id/:name" element={<Post />} /> */}
-          <Route path="/post" element={<Post />} />
+          {/* <Route path="/post/*" element={<Post />} /> */}
         </Routes>
         <AboutIconLink />
       </div>

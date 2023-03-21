@@ -1,6 +1,11 @@
 // Not used for example purposes
 
-import { Navigate, useNavigate /* , useParams */ } from "react-router-dom";
+import {
+  Navigate,
+  useNavigate,
+  Routes,
+  Route /* , useParams */,
+} from "react-router-dom";
 
 function Post() {
   // const params = useParams();
@@ -22,6 +27,9 @@ function Post() {
       <button type="submit" onClick={onClickHandler}>
         Navigate
       </button>
+      <Routes>
+        <Route path="/show" element={<h1>Showing off nested routes</h1>} />
+      </Routes>
       {/* <h1>Post {params.id}</h1> */}
       {/* <p>Name: {params.name}</p> */}
     </div>
