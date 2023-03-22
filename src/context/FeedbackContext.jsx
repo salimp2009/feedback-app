@@ -27,6 +27,19 @@ export const FeedbackProvider = ({ children }) => {
     edit: false,
   });
 
+  const updateFeedback = (id, updItem) => {
+    setFeedback(
+      feedback.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              ...updItem,
+            }
+          : item
+      )
+    );
+  };
+
   const editFeedback = (item) => {
     setFeedbackEdit({
       item,
@@ -35,7 +48,11 @@ export const FeedbackProvider = ({ children }) => {
   };
 
   const deleteFeedback = (id) => {
-    if (window.confirm("Are you sure you want to delete this feedback?")) {
+    if (feedbackEdit.edit === true) {
+      alert("Cannot delete; in Edit Mode!");
+    } else if (
+      window.confirm("Are you sure you want to delete this feedback?")
+    ) {
       setFeedback(feedback.filter((item) => item.id !== id));
     }
   };
@@ -49,10 +66,11 @@ export const FeedbackProvider = ({ children }) => {
     <FeedbackContext.Provider
       value={{
         feedback,
+        feedbackEdit,
         deleteFeedback,
         addFeedback,
         editFeedback,
-        feedbackEdit,
+        updateFeedback,
       }}
     >
       {children}
