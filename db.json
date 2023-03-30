@@ -19,6 +19,11 @@
       "rating": 10,
       "text": "this is another comment from Salim",
       "id": 5
+    },
+    {
+      "text": "dsfsdf dsfsdf dfsdf ",
+      "rating": 5,
+      "id": 6
     }
   ]
 }
