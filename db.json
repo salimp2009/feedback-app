@@ -16,14 +16,9 @@
       "text": "This is feedback item 3 from the backend"
     },
     {
-      "rating": 10,
-      "text": "this is another comment from Salim",
-      "id": 5
-    },
-    {
-      "text": "dsfsdf dsfsdf dfsdf ",
+      "text": "this is another comment from Salim testing backend",
       "rating": 5,
-      "id": 6
+      "id": 5
     }
   ]
 }
